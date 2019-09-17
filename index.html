@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vue Demo</title>
+	<link rel="stylesheet" href="">
+	<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+	<div id="myid">
+		<p>
+			<button @click="a++">A</button>
+			<button @click="b++">B</button>
+		</p>
+		<p>
+			a: {{a}}
+			b: {{b}}
+			A: {{AAA}}
+			B: {{BBB}}
+			x: {{x}}
+		</p>
+	</div>
+
+	<script type="text/javascript">
+		new Vue({
+			el: "#myid",
+			data: {
+				a: 0,
+				b: 0,
+				A: 20,
+				B: 20,
+				x: 0
+			},
+			methods: {
+				AA: function() {
+					console.log("AAA")
+					return this.A + this.a;
+				},
+				BB: function() {
+					console.log("BBB")
+					return this.B + this.b;
+				},
+				XX: function() {
+					console.log("XXX")
+					return this.x;
+				}
+			},
+			computed: {
+				AAA: function() {
+					console.log("AAA")
+					return this.A + this.a;
+				},
+				BBB: function() {
+					console.log("BBB")
+					return this.B + this.b;
+				}
+			}
+		});
+	</script>
+</body>
+</html>
